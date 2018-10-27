@@ -1,7 +1,7 @@
 export class Todo {
   id: number;
   task: string;
-  todoby: Date;
+  dueDate: Date;
   done: boolean;
 }
  
