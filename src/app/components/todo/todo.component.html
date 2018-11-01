@@ -11,6 +11,10 @@
             <input type="text" id="task" name="task" formControlName="task" class="form-control" placeholder="Enter your next task">
           </div>
           <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" id="price" name="price" formControlName="price" class="form-control" placeholder="Price">
+          </div>
+          <div class="form-group">
             <label for="todoby">Due Date</label>
             <input type="text" id="dueDate" bsDatepicker 
             name="dueDate" formControlName="dueDate" 
@@ -28,9 +32,10 @@
         </div>
         <div class="card-body">
           <div class="row" *ngFor="let todo of todos" >
-            <div class="col-sm-3">{{todo.task}}</div>
+            <div class="col-sm-2">{{todo.task}}</div>
+            <div class="col-sm-2">{{todo.price}}</div>
             <div class="col-sm-3">{{todo.dueDate | date}}</div>
-            <div class="col-sm-6">in 3 days</div>
+            <div class="col-sm-5">in 3 days</div>
           </div>
           
         </div>

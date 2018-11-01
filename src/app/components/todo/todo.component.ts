@@ -17,6 +17,7 @@ export class TodoComponent implements OnInit {
   ngOnInit() {
     this.todoForm = this.formBuilder.group({
       task: new FormControl('', [Validators.required]),
+      price: new FormControl('', [Validators.required]),
       dueDate: new FormControl('', [Validators.required])
     });
   }
