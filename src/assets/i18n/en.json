@@ -1,0 +1,10 @@
+{
+  "TODO": {
+    "HEADER": "Add Todo",
+    "TASK": "Task",
+    "DUEDATE": "Due Date",
+    "PRICE": "Price"
+  },
+  "HOME": {},
+  "LOGIN": {}
+}
