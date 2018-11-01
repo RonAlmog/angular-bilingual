@@ -6,6 +6,7 @@ import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { CookieService } from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -41,7 +42,11 @@ export function createTranslateLoader(http: HttpClient) {
   })
 
   ],
-  providers: [TodoService],
+  providers: [
+    TodoService,
+    CookieService,
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
