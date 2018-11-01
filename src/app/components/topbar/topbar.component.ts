@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-topbar',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 
 export class TopbarComponent {
-  constructor() { }
+  constructor(public tranService: TranslateService) { }
+
+  setLang(lang: string) {
+    this.tranService.use(lang);
+  }
 
 }
