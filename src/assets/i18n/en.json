@@ -3,7 +3,9 @@
     "HEADER": "Add Todo",
     "TASK": "Task",
     "DUEDATE": "Due Date",
-    "PRICE": "Price"
+    "PRICE": "Price",
+    "SAVE": "Save Todo",
+    "TODOLIST": "Todo List"
   },
   "HOME": {},
   "LOGIN": {}

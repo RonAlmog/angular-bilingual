@@ -7,20 +7,20 @@
       <div class="card-body">
         <form [formGroup]="todoForm" (ngSubmit)="submitTodo()">
           <div class="form-group">
-            <label for="task">Task</label>
+            <label for="task">{{'TODO.TASK' | translate}}</label>
             <input type="text" id="task" name="task" formControlName="task" class="form-control" placeholder="Enter your next task">
           </div>
           <div class="form-group">
-            <label for="price">Price</label>
+            <label for="price">{{'TODO.PRICE' | translate}}</label>
             <input type="text" id="price" name="price" formControlName="price" class="form-control" placeholder="Price">
           </div>
           <div class="form-group">
-            <label for="todoby">Due Date</label>
+            <label for="todoby">{{'TODO.DUEDATE' | translate}}</label>
             <input type="text" id="dueDate" bsDatepicker 
             name="dueDate" formControlName="dueDate" 
             class="form-control" placeholder="Due Date">
           </div>
-          <button type="submit" class="btn btn-primary" [disabled]="!todoForm.valid">Save Todo</button>
+          <button type="submit" class="btn btn-primary" [disabled]="!todoForm.valid">{{'TODO.SAVE' | translate}}</button>
         </form>
       </div>
     </div>
@@ -28,7 +28,7 @@
   <div class="col-sm">
       <div class="card">
         <div class="card-header">
-          <h3>Todo List</h3>
+          <h3>{{'TODO.TODOLIST' | translate}}</h3>
         </div>
         <div class="card-body">
           <div class="row" *ngFor="let todo of todos" >
