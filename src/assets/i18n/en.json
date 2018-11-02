@@ -1,4 +1,7 @@
 {
+  "MENU": {
+    "LANG": "English"
+  },
   "TODO": {
     "HEADER": "Add Todo",
     "TASK": "Task",

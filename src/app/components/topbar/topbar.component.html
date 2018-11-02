@@ -16,19 +16,19 @@
           <li class="nav-item">
             <a class="nav-link" href="/help">Help</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" (click)="setLang('en')" href="javascript:void(0)">En</a>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{'MENU.LANG' | translate }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" (click)="setLang('en')" href="javascript:void(0)">English</a>
+              <a class="dropdown-item" (click)="setLang('fr')" href="javascript:void(0)">Français</a>
+            </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" (click)="setLang('fr')" href="javascript:void(0)">Fr</a>
-          </li>
-
         </ul>
+
         
-        <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-default" type="submit">Search</button>
-        </form>
 
     </div>
 </nav>
