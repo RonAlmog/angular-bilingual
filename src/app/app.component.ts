@@ -17,7 +17,7 @@ export class AppComponent {
     translateService.setDefaultLang('en');
 
     this.translateService.addLangs(this.langsArray); // set the allowed langs
-    const browserLang = 'fr'; // this.translateService.getBrowserLang(); // get the browser's lang
+    const browserLang = this.translateService.getBrowserLang(); // get the browser's lang
     const savedLang = this.cookieService.get('lang'); // read lang from cookie
 
     if (savedLang) {
