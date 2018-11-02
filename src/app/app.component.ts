@@ -8,18 +8,33 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  langsArray: string[] = ['en', 'fr'];
+
   constructor(
-    public translate: TranslateService,
+    public translateService: TranslateService,
     public cookieService: CookieService
     ) {
-    translate.setDefaultLang('en');
-    const savedLang = this.cookieService.get('lang');
+    translateService.setDefaultLang('en');
+
+    this.translateService.addLangs(this.langsArray); // set the allowed langs
+    const browserLang = 'fr'; // this.translateService.getBrowserLang(); // get the browser's lang
+    const savedLang = this.cookieService.get('lang'); // read lang from cookie
+
     if (savedLang) {
-      translate.use(savedLang);
+      // if there is a saved lang, use it.
+      translateService.use(savedLang);
     } else {
-      translate.use('en');
-      this.cookieService.set('lang', 'en');
+      // no saved lang. try browser lang
+      if (this.langsArray.indexOf(browserLang) > -1) {
+        translateService.use(browserLang);
+        this.cookieService.set('lang', browserLang);
+      } else {
+        // just take the default
+        translateService.use('en');
+        this.cookieService.set('lang', 'en');
+      }
     }
   }
+
   title = 'app';
 }
